@@ -13,6 +13,7 @@ I run a self-hosted seedbox and my own network services (Swizzin, ruTorrent, Pi-
   - an empty timeout or number of tries no longer stops the container ([#55](https://github.com/satishweb/docker-doh/pull/55));
   - `DOH_CONFIG_FILE` is no longer read as a Docker secret ([#56](https://github.com/satishweb/docker-doh/pull/56));
   - the health check reads the configuration file set by `DOH_CONFIG_FILE` ([#61](https://github.com/satishweb/docker-doh/pull/61)).
+- **Suwayomi** (manga reader web interface): a search saved with filters in an older version no longer crashes the source page ([#1181](https://github.com/Suwayomi/Suwayomi-WebUI/pull/1181)).
 
 Under review, among others: the Unbound image by madnuttah, the ruTorrent file manager plugin, Swizzin and its dashboard. [All my pull requests](https://github.com/search?q=author%3AHeliedan+is%3Apr&type=pullrequests).
 
