@@ -11,7 +11,8 @@ I run a self-hosted seedbox and my own network services (Swizzin, ruTorrent, Pi-
   - Three iPad bugs I reported were fixed by the maintainers ([#3346](https://github.com/Novik/ruTorrent/pull/3346), [#3348](https://github.com/Novik/ruTorrent/pull/3348), [#3361](https://github.com/Novik/ruTorrent/pull/3361)).
 - **docker-doh** (DNS over HTTPS server image):
   - an empty timeout or number of tries no longer stops the container ([#55](https://github.com/satishweb/docker-doh/pull/55));
-  - `DOH_CONFIG_FILE` is no longer read as a Docker secret ([#56](https://github.com/satishweb/docker-doh/pull/56)).
+  - `DOH_CONFIG_FILE` is no longer read as a Docker secret ([#56](https://github.com/satishweb/docker-doh/pull/56));
+  - the health check reads the configuration file set by `DOH_CONFIG_FILE` ([#61](https://github.com/satishweb/docker-doh/pull/61)).
 
 Under review, among others: the Unbound image by madnuttah, the ruTorrent file manager plugin, Swizzin and its dashboard. [All my pull requests](https://github.com/search?q=author%3AHeliedan+is%3Apr&type=pullrequests).
 
