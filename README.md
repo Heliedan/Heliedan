@@ -8,6 +8,7 @@ I run a self-hosted seedbox and my own network services (Swizzin, ruTorrent, Pi-
   - I translated the French interface strings that were still in English and fixed wrong translations ([#3458](https://github.com/Novik/ruTorrent/pull/3458)).
   - I fixed two plugins that showed the wrong startup error ([#3459](https://github.com/Novik/ruTorrent/pull/3459)).
   - Both are in ruTorrent 5.3.19.
+  - In the File Manager plugin, "New Archive", "Copy" and "File Checksum" now work from the torrent Files tab ([#90](https://github.com/nelu/rutorrent-filemanager/pull/90)).
   - Three iPad bugs I reported were fixed by the maintainers ([#3346](https://github.com/Novik/ruTorrent/pull/3346), [#3348](https://github.com/Novik/ruTorrent/pull/3348), [#3361](https://github.com/Novik/ruTorrent/pull/3361)).
 - **docker-doh** (DNS over HTTPS server image):
   - an empty timeout or number of tries no longer stops the container ([#55](https://github.com/satishweb/docker-doh/pull/55));
