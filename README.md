@@ -8,6 +8,8 @@ I run a self-hosted seedbox and my own network services (Swizzin, ruTorrent, Pi-
   - I translated the French interface strings that were still in English and fixed wrong translations ([#3458](https://github.com/Novik/ruTorrent/pull/3458)).
   - I fixed two plugins that showed the wrong startup error ([#3459](https://github.com/Novik/ruTorrent/pull/3459)).
   - Both are in ruTorrent 5.3.19.
+  - A private torrent added with "Randomize info hashes" ticked now keeps its own info hash, so private trackers no longer refuse it as unregistered ([#3467](https://github.com/Novik/ruTorrent/pull/3467)).
+  - The first line of the Log tab is now translated ([#3468](https://github.com/Novik/ruTorrent/pull/3468)).
   - In the File Manager plugin, "New Archive", "Copy" and "File Checksum" now work from the torrent Files tab ([#90](https://github.com/nelu/rutorrent-filemanager/pull/90)).
   - In the Telegram notification plugin proposed for ruTorrent, real notifications from rTorrent now arrive, custom templates no longer get refused by Telegram, and Telegram's error text is shown ([drrako/ruTorrent#2](https://github.com/drrako/ruTorrent/pull/2)).
   - Three iPad bugs I reported were fixed by the maintainers ([#3346](https://github.com/Novik/ruTorrent/pull/3346), [#3348](https://github.com/Novik/ruTorrent/pull/3348), [#3361](https://github.com/Novik/ruTorrent/pull/3361)).
@@ -17,8 +19,9 @@ I run a self-hosted seedbox and my own network services (Swizzin, ruTorrent, Pi-
   - the health check reads the configuration file set by `DOH_CONFIG_FILE` ([#61](https://github.com/satishweb/docker-doh/pull/61)).
 - **Suwayomi** (manga reader web interface): a search saved with filters in an older version no longer crashes the source page ([#1181](https://github.com/Suwayomi/Suwayomi-WebUI/pull/1181)).
 - **Bazarr** (subtitle manager): "Remove HI" no longer deletes dialogue between two hearing impaired tags ([#3687](https://github.com/morpheus65535/bazarr/pull/3687)).
+- **Unbound** (DNS resolver image by madnuttah): the images now include the DNSSEC root trust anchor, so `unbound-checkconf` works in a fresh container ([#242](https://github.com/madnuttah/unbound-docker/pull/242)).
 
-Under review, among others: the Unbound image by madnuttah, the ruTorrent file manager plugin, Swizzin and its dashboard. [All my pull requests](https://github.com/search?q=author%3AHeliedan+is%3Apr&type=pullrequests).
+Under review, among others: flood, cross-seed, mkbrr, Swizzin and its dashboard. [All my pull requests](https://github.com/search?q=author%3AHeliedan+is%3Apr&type=pullrequests).
 
 ## My project
 
