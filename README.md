@@ -20,8 +20,9 @@ I run a self-hosted seedbox and my own network services (Swizzin, ruTorrent, Pi-
 - **Suwayomi** (manga reader web interface): a search saved with filters in an older version no longer crashes the source page ([#1181](https://github.com/Suwayomi/Suwayomi-WebUI/pull/1181)).
 - **Bazarr** (subtitle manager): "Remove HI" no longer deletes dialogue between two hearing impaired tags ([#3687](https://github.com/morpheus65535/bazarr/pull/3687)).
 - **Unbound** (DNS resolver image by madnuttah): the images now include the DNSSEC root trust anchor, so `unbound-checkconf` works in a fresh container ([#242](https://github.com/madnuttah/unbound-docker/pull/242)).
+- **mkbrr** (torrent file tool by the autobrr team): `mkbrr modify` now exits with an error when a torrent file fails, instead of reporting success ([#259](https://github.com/autobrr/mkbrr/pull/259)).
 
-Under review, among others: flood, cross-seed, mkbrr, Swizzin and its dashboard. [All my pull requests](https://github.com/search?q=author%3AHeliedan+is%3Apr&type=pullrequests).
+Under review, among others: flood, cross-seed, Swizzin and its dashboard. [All my pull requests](https://github.com/search?q=author%3AHeliedan+is%3Apr&type=pullrequests).
 
 ## My project
 
