@@ -21,6 +21,7 @@ I run a self-hosted seedbox and my own network services (Swizzin, ruTorrent, Pi-
 - **Bazarr** (subtitle manager): "Remove HI" no longer deletes dialogue between two hearing impaired tags ([#3687](https://github.com/morpheus65535/bazarr/pull/3687)).
 - **Unbound** (DNS resolver image by madnuttah): the images now include the DNSSEC root trust anchor, so `unbound-checkconf` works in a fresh container ([#242](https://github.com/madnuttah/unbound-docker/pull/242)).
 - **mkbrr** (torrent file tool by the autobrr team): `mkbrr modify` now exits with an error when a torrent file fails, instead of reporting success ([#259](https://github.com/autobrr/mkbrr/pull/259)).
+- **autobrr** (download automation for torrents): a filter's "Except categories" now also rejects releases from Torznab, Newznab and RSS feeds, which it used to let through ([#2814](https://github.com/autobrr/autobrr/pull/2814)).
 
 Under review, among others: flood, cross-seed, Swizzin and its dashboard. [All my pull requests](https://github.com/search?q=author%3AHeliedan+is%3Apr&type=pullrequests).
 
