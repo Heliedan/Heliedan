@@ -32,7 +32,7 @@ Under review, among others: flood, cross-seed, Swizzin and its dashboard. [All m
 - live CPU, RAM and disk cards with a disk-full alert;
 - login protection.
 
-It is tested on Ubuntu 20.04 to 24.04 and Debian 11 and 12. Latest release: [heliedan-2.4](https://github.com/Heliedan/swizzin_dashboard/releases/tag/heliedan-2.4).
+It is tested on Ubuntu 20.04 to 24.04 and Debian 11 and 12. Latest release: [heliedan-2.5](https://github.com/Heliedan/swizzin_dashboard/releases/tag/heliedan-2.5).
 
 ## How I work
 
