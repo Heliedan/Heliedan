@@ -10,6 +10,7 @@ I run a self-hosted seedbox and my own network services (Swizzin, ruTorrent, Pi-
   - Both are in ruTorrent 5.3.19.
   - A private torrent added with "Randomize info hashes" ticked now keeps its own info hash, so private trackers no longer refuse it as unregistered ([#3467](https://github.com/Novik/ruTorrent/pull/3467)).
   - The first line of the Log tab is now translated ([#3468](https://github.com/Novik/ruTorrent/pull/3468)).
+  - The CPU graph in the status bar keeps only the last three minutes again, instead of every sample since the page was opened ([#3513](https://github.com/Novik/ruTorrent/pull/3513)).
   - In the File Manager plugin, "New Archive", "Copy" and "File Checksum" now work from the torrent Files tab ([#90](https://github.com/nelu/rutorrent-filemanager/pull/90)).
   - In the Telegram notification plugin proposed for ruTorrent, real notifications from rTorrent now arrive, custom templates no longer get refused by Telegram, and Telegram's error text is shown ([drrako/ruTorrent#2](https://github.com/drrako/ruTorrent/pull/2)). After the maintainer's review, a second PR fixed the points that came from mine and three more ([drrako/ruTorrent#3](https://github.com/drrako/ruTorrent/pull/3)).
   - Three iPad bugs I reported were fixed by the maintainers ([#3346](https://github.com/Novik/ruTorrent/pull/3346), [#3348](https://github.com/Novik/ruTorrent/pull/3348), [#3361](https://github.com/Novik/ruTorrent/pull/3361)).
