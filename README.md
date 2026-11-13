@@ -12,7 +12,8 @@ I run a self-hosted seedbox and my own network services (Swizzin, ruTorrent, Pi-
   - The first line of the Log tab is now translated ([#3468](https://github.com/Novik/ruTorrent/pull/3468)).
   - The CPU graph in the status bar keeps only the last three minutes again, instead of every sample since the page was opened ([#3513](https://github.com/Novik/ruTorrent/pull/3513)).
   - In the File Manager plugin, "New Archive", "Copy" and "File Checksum" now work from the torrent Files tab ([#90](https://github.com/nelu/rutorrent-filemanager/pull/90)).
-  - In the Telegram notification plugin proposed for ruTorrent, real notifications from rTorrent now arrive, custom templates no longer get refused by Telegram, and Telegram's error text is shown ([drrako/ruTorrent#2](https://github.com/drrako/ruTorrent/pull/2)). After the maintainer's review, a second PR fixed the points that came from mine and three more ([drrako/ruTorrent#3](https://github.com/drrako/ruTorrent/pull/3)).
+  - In the Telegram notification plugin proposed for ruTorrent, real notifications from rTorrent now arrive, custom templates no longer get refused by Telegram, and Telegram's error text is shown ([drrako/ruTorrent#2](https://github.com/drrako/ruTorrent/pull/2)). After the maintainer's review, a second PR fixed the points that came from mine and three more ([drrako/ruTorrent#3](https://github.com/drrako/ruTorrent/pull/3)). The plugin is now part of ruTorrent ([#3274](https://github.com/Novik/ruTorrent/pull/3274)).
+  - In that Telegram plugin, messages can now show the size, the label and the ratio of a torrent ([#3530](https://github.com/Novik/ruTorrent/pull/3530)), and a hash check that finds a complete torrent incomplete now sends a notification ([#3532](https://github.com/Novik/ruTorrent/pull/3532)).
   - Three iPad bugs I reported were fixed by the maintainers ([#3346](https://github.com/Novik/ruTorrent/pull/3346), [#3348](https://github.com/Novik/ruTorrent/pull/3348), [#3361](https://github.com/Novik/ruTorrent/pull/3361)).
 - **libtorrent** (the library behind rTorrent): I traced a crash, when a file is set to "Don't download" on a stopped torrent, to a check that had been removed by accident. The maintainer added it back ([#1044](https://github.com/rakshasa/libtorrent/pull/1044)), and I tested his fix and another version of it before the issue was closed ([#236](https://github.com/rakshasa/libtorrent/issues/236)).
 - **docker-doh** (DNS over HTTPS server image):
@@ -24,17 +25,20 @@ I run a self-hosted seedbox and my own network services (Swizzin, ruTorrent, Pi-
 - **Unbound** (DNS resolver image by madnuttah): the images now include the DNSSEC root trust anchor, so `unbound-checkconf` works in a fresh container ([#242](https://github.com/madnuttah/unbound-docker/pull/242)). The test run on each new image now checks that Unbound itself answers, instead of a check that could not fail ([#247](https://github.com/madnuttah/unbound-docker/pull/247)). The startup script now reads `DISABLE_SET_PERMS` as a string and warns about a value other than `true` or `false`, instead of printing `not found` ([#250](https://github.com/madnuttah/unbound-docker/pull/250)). The pull request template now links to the Contributing section of the documentation, instead of a deleted file ([#251](https://github.com/madnuttah/unbound-docker/pull/251)).
 - **mkbrr** (torrent file tool by the autobrr team): `mkbrr modify` now exits with an error when a torrent file fails, instead of reporting success ([#259](https://github.com/autobrr/mkbrr/pull/259)).
 - **autobrr** (download automation for torrents): a filter's "Except categories" now also rejects releases from Torznab, Newznab and RSS feeds, which it used to let through ([#2814](https://github.com/autobrr/autobrr/pull/2814)). The Transmission action's "Delete stalled" now really deletes a torrent whose tracker never answers, after checking the trackers one last time ([#2816](https://github.com/autobrr/autobrr/pull/2816)). A Deluge action with a label in capital letters now sets the label, instead of leaving the torrent without one and failing ([#2821](https://github.com/autobrr/autobrr/pull/2821)).
+- **go-qbittorrent** (the qBittorrent library used by autobrr and qui): after the last re-announce, the trackers are now checked one more time, so a torrent whose tracker has just come back is no longer deleted ([#183](https://github.com/autobrr/go-qbittorrent/pull/183)).
 
-Under review, among others: fail2ban, flood, cross-seed, Swizzin and its dashboard. [All my pull requests](https://github.com/search?q=author%3AHeliedan+is%3Apr&type=pullrequests).
+Under review, among others: fail2ban, flood, cross-seed, docker-doh, Swizzin and its dashboard. [All my pull requests](https://github.com/search?q=author%3AHeliedan+is%3Apr&type=pullrequests).
 
 ## My project
 
 **[My edition of the Swizzin dashboard](https://github.com/Heliedan/swizzin_dashboard)** (unofficial):
-- an App Store to install and uninstall apps from the panel;
-- live CPU, RAM and disk cards with a disk-full alert;
-- login protection.
+- live CPU, RAM, disk and network cards and graphs, with a disk-full alert;
+- an optional Overview layout, arranged by each account;
+- pending updates, panel sign-ins, top processes and the logs of each service;
+- login protection;
+- an optional App Store to install and uninstall apps from the panel (off by default: a new install adds no service that runs as root).
 
-It is tested on Ubuntu 20.04 to 24.04 and Debian 11 and 12. Latest release: [heliedan-2.5](https://github.com/Heliedan/swizzin_dashboard/releases/tag/heliedan-2.5).
+It is tested on Ubuntu 20.04 to 24.04 and Debian 11 and 12. Latest release: [heliedan-3.1](https://github.com/Heliedan/swizzin_dashboard/releases/tag/heliedan-3.1).
 
 ## How I work
 
